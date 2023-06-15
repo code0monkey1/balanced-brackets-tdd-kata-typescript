@@ -71,6 +71,23 @@ describe('Brackets', () => {
                  expect(result).toBe('OK')
 
             })
+
+          })
+
+          describe('Multiple Parenthesis',()=>{
+             it('should give `FAIL` for `][`',()=>{
+
+                 // arrange
+                 const brackets = new Brackets()
+   
+                 //act
+                 const result = brackets.validate('][')
+   
+                 // assert
+                 expect(result).toBe('FAIL')
+
+            })
+
           })
           
              

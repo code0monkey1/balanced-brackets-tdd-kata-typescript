@@ -2,7 +2,7 @@ import Brackets from '../src/Brackets';
 
 describe('Brackets', () => {
      
-     describe('parts are defined',()=>{
+     describe('Should be defined',()=>{
          
          it('the class `Brackets` class and `validate` function is defined',()=>{
               
@@ -12,7 +12,6 @@ describe('Brackets', () => {
               
               //assert
               expect(brackets.validate).toBeInstanceOf(Function)
-
          })
 
      })
@@ -20,7 +19,7 @@ describe('Brackets', () => {
       describe('Empty String',()=>{
 
 
-        it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` when given empty string : $str ',({str})=>{
+        it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` for empty string',({str})=>{
           
 
              // act
@@ -37,7 +36,7 @@ describe('Brackets', () => {
       })
       describe('Single Parenthesis Pair',()=>{
 
-            it('should give `OK` when `[]`string is give for validation',()=>{
+            it('should give `OK` for `[]`',()=>{
               
    
                  // arrange

@@ -6,8 +6,6 @@ export default class Brackets implements IBracketValidator{
         
         str=str.trim()
 
-        let result =''
-
          if(str.length===0)
           return 'empty'
         

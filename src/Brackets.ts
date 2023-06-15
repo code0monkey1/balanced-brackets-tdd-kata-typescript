@@ -9,7 +9,12 @@ export default class Brackets implements IBracketValidator{
           result = 'empty'
         }
 
-
+        // const strArr = str.split('')
+        
+        if(str[0]=='[' && str[1]===']'){
+          result = 'OK'
+        }
+    
         return result
   }
   

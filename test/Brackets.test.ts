@@ -75,16 +75,29 @@ describe('Brackets', () => {
           })
 
           describe('Multiple Parenthesis',()=>{
-             it('should give `FAIL` for `][`',()=>{
+             it.each([{str:']['},{str:'][]['},{str:'[][]]['}])('should give `FAIL` for $str',({str})=>{
 
                  // arrange
                  const brackets = new Brackets()
    
                  //act
-                 const result = brackets.validate('][')
+                 const result = brackets.validate(str)
    
                  // assert
                  expect(result).toBe('FAIL')
+
+            })
+
+                it.each([{str:'[[]]'},{str:'[[[][]]]'}])('should give `OK` for $str',({str})=>{
+
+                 // arrange
+                 const brackets = new Brackets()
+   
+                 //act
+                 const result = brackets.validate(str)
+   
+                 // assert
+                 expect(result).toBe('OK')
 
             })
 

@@ -1,12 +1,9 @@
 # tdd-fundamentals-in-typescript
 
-### So , what is Test Driven Development ? 
 
-![TDD](pictures/tdd.jpg 'test driven development')
+### Balanced Brackets Kata 
 
----
-
-[TDD Exercise Book](./data/TDD-Fundamentals-in-TypeScript.pdf)
+Kata Web Link : https://www.tddbuddy.com/katas/balanced-brackets.html
 
 ---
 

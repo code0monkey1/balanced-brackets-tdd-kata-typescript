@@ -56,6 +56,23 @@ describe('Brackets', () => {
 
 
           })
+
+          describe('Double Parenthesis Pair', () => {
+              
+            it('should give `OK` for `[][]`',()=>{
+
+                 // arrange
+                 const brackets = new Brackets()
+   
+                 //act
+                 const result = brackets.validate('[][]')
+   
+                 // assert
+                 expect(result).toBe('OK')
+
+            })
+          })
+          
              
 
      })

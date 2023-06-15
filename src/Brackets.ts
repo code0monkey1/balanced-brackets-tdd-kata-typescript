@@ -3,16 +3,21 @@ import IBracketValidator from "./IBracketValidator";
 export default class Brackets implements IBracketValidator{
   
   validate(str: string): string {
+        
+        str=str.trim()
+
         let result =''
 
-         if(str.trim()===''){
+         if(str===''){
           result = 'empty'
         }
 
-        // const strArr = str.split('')
+
+        const set= new Set()
         
-        if(str[0]=='[' && str[1]===']'){
-          result = 'OK'
+        for(let char of str ){
+
+            if(char==='')
         }
     
         return result

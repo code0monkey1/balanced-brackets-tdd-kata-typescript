@@ -19,34 +19,44 @@ describe('Brackets', () => {
 
      describe('validate ',()=>{
         
-         it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` when given empty string : $str ',({str})=>{
-           
+      describe('Empty String',()=>{
 
-              // act
-              const brackets = new Brackets()
 
-              const result = brackets.validate(str)
+        it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` when given empty string : $str ',({str})=>{
+          
 
-              // assert
-              expect(result).toBe('empty')
+             // act
+             const brackets = new Brackets()
 
-         })
+             const result = brackets.validate(str)
 
+             // assert
+             expect(result).toBe('empty')
+
+        })
+       
+
+      })
+          describe('Single Parenthesis Pair',()=>{
+
+            it('should give `OK` when `[]`string is give for validation',()=>{
+              
+   
+                 // arrange
+   
+                 const brackets = new Brackets()
+   
+                 //act
+                 const result = brackets.validate('[]')
+   
+                 // assert
+                 expect(result).toBe('OK')
+   
+            })
+
+
+          })
              
-         it('should give `OK` when `[]`string is give for validation',()=>{
-           
-
-              // arrange
-
-              const brackets = new Brackets()
-
-              //act
-              const result = brackets.validate('[]')
-
-              // assert
-              expect(result).toBe('OK')
-
-         })
 
      })
 })

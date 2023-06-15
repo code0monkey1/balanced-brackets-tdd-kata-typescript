@@ -16,7 +16,6 @@ describe('Brackets', () => {
          })
 
      })
-
         
       describe('Empty String',()=>{
 
@@ -36,7 +35,7 @@ describe('Brackets', () => {
        
 
       })
-          describe('Single Parenthesis Pair',()=>{
+      describe('Single Parenthesis Pair',()=>{
 
             it('should give `OK` when `[]`string is give for validation',()=>{
               

@@ -21,9 +21,6 @@ describe('Brackets', () => {
         
          it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` when given empty string : $str ',({str})=>{
            
-               
-              // arrange
-              expect(Brackets).toBeDefined()
 
               // act
               const brackets = new Brackets()
@@ -36,19 +33,18 @@ describe('Brackets', () => {
          })
 
              
-         it('should give `OK` when empty string is give for validation',()=>{
+         it('should give `OK` when `[]`string is give for validation',()=>{
            
-               
-              // arrange
-              expect(Brackets).toBeDefined()
 
-              // act
+              // arrange
+
               const brackets = new Brackets()
 
-              const result = brackets.validate('')
+              //act
+              const result = brackets.validate('[]')
 
               // assert
-              expect(result).toBe('empty')
+              expect(result).toBe('OK')
 
          })
 

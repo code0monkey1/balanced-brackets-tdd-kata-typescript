@@ -6,7 +6,7 @@ export default class Brackets implements IBracketValidator{
         
         str=str.trim()
 
-         if(str.length===0)
+        if(str.length===0)
           return 'empty'
         
         const arr = []
@@ -18,11 +18,12 @@ export default class Brackets implements IBracketValidator{
             
             else
               arr.pop()
-
+        
         }
        
-        return arr.length===0?"OK":"FAIL"
+        const result = arr.length===0?"OK":"FAIL"
 
+        return result
   }
   
 

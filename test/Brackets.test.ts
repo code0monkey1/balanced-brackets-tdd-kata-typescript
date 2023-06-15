@@ -17,7 +17,6 @@ describe('Brackets', () => {
 
      })
 
-     describe('validate ',()=>{
         
       describe('Empty String',()=>{
 
@@ -74,36 +73,45 @@ describe('Brackets', () => {
 
           })
 
-          describe('Multiple Parenthesis',()=>{
-             it.each([{str:']['},{str:'][]['},{str:'[][]]['}])('should give `FAIL` for $str',({str})=>{
+          describe('Multiple Parenthesis \n',()=>{
 
-                 // arrange
-                 const brackets = new Brackets()
-   
-                 //act
-                 const result = brackets.validate(str)
-   
-                 // assert
-                 expect(result).toBe('FAIL')
+            describe('Should return `FAIL`', () => {
+              
+              it.each([{str:']['},{str:'][]['},{str:'[][]]['}])('for $str',({str})=>{
+  
+                  // arrange
+                  const brackets = new Brackets()
+    
+                  //act
+                  const result = brackets.validate(str)
+    
+                  // assert
+                  expect(result).toBe('FAIL')
+  
+             })
+
+            })
+            
+            describe('Should return `OK`',()=>{
+
+              it.each([{str:'[[]]'},{str:'[[[][]]]'}])(' for $str',({str})=>{
+  
+               // arrange
+               const brackets = new Brackets()
+  
+               //act
+               const result = brackets.validate(str)
+  
+               // assert
+               expect(result).toBe('OK')
+  
+             })
 
             })
 
-                it.each([{str:'[[]]'},{str:'[[[][]]]'}])('should give `OK` for $str',({str})=>{
-
-                 // arrange
-                 const brackets = new Brackets()
-   
-                 //act
-                 const result = brackets.validate(str)
-   
-                 // assert
-                 expect(result).toBe('OK')
-
-            })
 
           })
           
              
 
      })
-})

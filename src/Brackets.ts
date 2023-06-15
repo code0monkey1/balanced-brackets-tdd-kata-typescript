@@ -11,6 +11,8 @@ export default class Brackets implements IBracketValidator{
         
         const arr = []
         
+        let result :string
+
         for(let char of str ){
 
            if(char==='[')
@@ -21,10 +23,9 @@ export default class Brackets implements IBracketValidator{
             
         }
        
-        if(arr.length===0)
-            return 'OK'    
+        result = arr.length===0?"OK":"FAIL"
 
-         return "FAIL"
+        return result
       
   }
   

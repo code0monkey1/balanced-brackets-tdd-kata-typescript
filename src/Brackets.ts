@@ -8,32 +8,26 @@ export default class Brackets implements IBracketValidator{
 
         let result =''
 
-         if(str===''){
-          result = 'empty'
-        }
-
-
+         if(str.length===0)
+          return 'empty'
+        
         const arr = []
         
         for(let char of str ){
 
-            if(char==='['){
+           if(char==='[')
               arr.push(char)
-            }
-            else{
+            
+            else
               arr.pop()
-            }
-          
+            
         }
        
-        if(arr.length===0){
-          result="OK"
-        }
-        else{
-           result ="FAIL"
-        }
-    
-        return result
+        if(arr.length===0)
+            return 'OK'    
+
+         return "FAIL"
+      
   }
   
 

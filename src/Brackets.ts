@@ -1,16 +1,17 @@
-import IValidator from "./IValidator";
+import IBracketValidator from "./IBracketValidator";
 
-export default class Brackets implements IValidator{
+export default class Brackets implements IBracketValidator{
   
   validate(str: string): string {
+        let result =''
 
          if(str.trim()===''){
-          return 'empty'
+          result = 'empty'
         }
 
-        return ''
+
+        return result
   }
-   
- 
+  
 
 }

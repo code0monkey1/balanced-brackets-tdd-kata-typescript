@@ -17,9 +17,9 @@ describe('Brackets', () => {
 
      })
 
-     describe('Single String ',()=>{
+     describe('validate ',()=>{
         
-         it('should give `empty` when empty string is give for validation',()=>{
+         it.each([{str:''},{str:'  '},{str:'      '}])('should give `empty` when given empty string : $str ',({str})=>{
            
                
               // arrange
@@ -28,7 +28,7 @@ describe('Brackets', () => {
               // act
               const brackets = new Brackets()
 
-              const result = brackets.validate('')
+              const result = brackets.validate(str)
 
               // assert
               expect(result).toBe('empty')
